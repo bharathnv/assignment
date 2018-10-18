@@ -1,3 +1,13 @@
+/*
+ * Input number of test cases
+ * Input number minutes limak stays in kitchen for each test case along with string of what limak eats (which is " " separated).
+ * for each input check whether number of minutes and number of foods matches. 
+ * if not print wrong input
+ * if yes then check whether number of minutes is equal to 1. If yes then check what limak has ate in that minute. If its is cookie then print No
+ * if number of minutes is greater than 1 then for each minute's food compare previous minute's food. If they are both equal to cookie then print No
+ * If above condition is not satisfied then print yes
+ * Follow the above procedure all the test cases
+ * */
 package com.bharath.assignment;
 
 import java.util.Scanner;
