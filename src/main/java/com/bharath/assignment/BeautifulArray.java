@@ -1,3 +1,14 @@
+/*
+ * Input number of test cases
+ * Input number of elements in that array and then accordingly list of elements in array separated by " "
+ * list of elements is taken as string so that in only one input operation we can get all the values.
+ * then using String Tokenizer and Integer.parseInt() string is converted to required format.
+ * check if number of elements entered and actual number mentioned in input is same or not. If not print wrong input
+ * Then for each test case ai, aj where i is not equal to j check whether ak exists or not in that list of elements. If not print No and exit for that test case.
+ * If above condition satisfies for all list of elements in array then print yes.
+ * Repeat above process for all the test cases.
+ * */
+
 package com.bharath.assignment;
 
 import java.util.Arrays;

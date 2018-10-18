@@ -1,3 +1,12 @@
+/*
+ * Input number of test cases
+ * Input base salary for each test case.
+ * if base salary is less than 1500 then hra is 0.1 multiplied by base salary and da is 0.9 multiplied by base salary
+ * if base salary is greater than or equal to 1500 then hra is 500 and da is .98 multiplied by base salary
+ * To get gross salary add results of hra and da with base salary. And then print base salary
+ * Repeat above process for each test case.
+ * */
+
 package com.bharath.assignment;
 
 import java.util.Scanner;

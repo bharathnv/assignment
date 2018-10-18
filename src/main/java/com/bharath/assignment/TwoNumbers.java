@@ -1,3 +1,12 @@
+/*
+ * Input number of test cases
+ * Input alice's number, bob's number and number of turns in an array for each test case.
+ * double the number alternatively i.e of alice's number and bob's number for given number of turns.
+ * Then find maximum and minimum of those numbers 
+ * print then quotient after dividing then maximum number by minimum number
+ * Repeat the above process for all the test cases.
+ * */
+
 package com.bharath.assignment;
 
 import java.util.Scanner;

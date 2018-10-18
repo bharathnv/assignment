@@ -1,3 +1,13 @@
+/*
+ * Input number of test cases
+ * Input number for each test case.
+ * convert number to string and then eventually to char array.
+ * reverse the char array
+ * form string using reversed char array.
+ * then convert it to integer format.
+ * Repeat the above process for all the test cases.
+ * */
+
 package com.bharath.assignment;
 
 import java.util.Scanner;
