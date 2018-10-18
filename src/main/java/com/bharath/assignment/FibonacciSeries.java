@@ -1,3 +1,14 @@
+/*
+ * Input number of test cases.
+ * Input the string for each test case.
+ * Convert string to char array.
+ * Sort the array in ascending order.
+ * Store each unique character in list and key value pairs in HashMap (In value number of occurrences are stored in value)
+ * then for each unique character stored in list check the given condition of fibonacci series. If any of the pairs dont satisfy the given condition then print Not Dyanamic
+ * If all character pairs satisfies the given condition then print Dynamic
+ * Repeat the above process for all the strings given in test cases.
+ * */
+
 package com.bharath.assignment;
 
 import java.util.ArrayList;
