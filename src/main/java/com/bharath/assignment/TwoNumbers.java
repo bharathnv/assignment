@@ -16,13 +16,20 @@ public class TwoNumbers {
 	
 	public static void main(String[] args) {	
 		Scanner scan = new Scanner(System.in);
+		
+		// get number of test cases and create arrays of appropriate length
 		int numberOfTestCases = scan.nextInt();
 		int[][] arrayOfTestCases = new int[numberOfTestCases][3];
+		
+		// for each test case input alice's, bob's number and number turns
 		for(int i=0; i<numberOfTestCases; i++) {
+			// get array in string format and converted to required format so that we can reduce number of reading operation which is costlier
 			String inputInStringFormat = scan.nextLine();
 			if(inputInStringFormat.equals("")) {
 				inputInStringFormat = scan.nextLine();
 			}
+			
+			// store alice's, bob's number and number turns in array using string tokenizer and store accordingly
 			StringTokenizer tokenizer = new StringTokenizer(inputInStringFormat, " ");
 			if(tokenizer.countTokens() == 3) {
 				int j=0;
@@ -34,16 +41,23 @@ public class TwoNumbers {
 				System.out.println("Wrong input");
 			}
 		}
+		
+		
 		for(int i=0; i<arrayOfTestCases.length; i++) {
 			for(int j=0; j<arrayOfTestCases[i][2]; j++) {
+				// double the alice's number and bob's number alternatively for given number of turns
 				if(j%2==0) {
 					arrayOfTestCases[i][0] = arrayOfTestCases[i][0] * 2;
 				} else {
 					arrayOfTestCases[i][1] = arrayOfTestCases[i][1] * 2;
 				}
 			}
+			
+			// find maximum and minimum of those numbers
 			int max = arrayOfTestCases[i][0] > arrayOfTestCases[i][1] ? arrayOfTestCases[i][0] : arrayOfTestCases[i][1];
 			int min = arrayOfTestCases[i][0] < arrayOfTestCases[i][1] ? arrayOfTestCases[i][0] : arrayOfTestCases[i][1];
+			
+			// print max divided by min.
 			System.out.println(max/min);
 		}
 		scan.close();

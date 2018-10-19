@@ -21,20 +21,37 @@ public class FibonacciSeries {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+		// get number of test cases and create arrays of appropriate length
 		int numberOfTestCases = scan.nextInt();
 		String[] arrayOfStrings = new String[numberOfTestCases+1];
+		
+		// get string for each test case
 		for(int i=0; i<numberOfTestCases+1; i++) {
 			arrayOfStrings[i] = scan.nextLine();
 		}
 		
 		for (String inputString : arrayOfStrings) {
 			if(inputString != null) {
+				
+				// hash map is used to store character and its number of occurences in key-value pair
 				HashMap<Character, Integer> uniqueCharactersWithCount = new HashMap<>();
+				
+				// input string is stored into character array.
 				char tempArray[] = inputString.toCharArray();
+				
+				// list is instantiated to store unique characters occurring in string.
 				List<Character> listOfUniqueCharacters = new ArrayList<>();
+				
+				// check whether length is greater than or equal to 3. if not print dynamic
 				if(tempArray.length >= 3) {
+					// sort the character array
 					Arrays.sort(tempArray);
+					
 					for(int i=0; i<tempArray.length; i++) {
+						
+						//get current character and check if it is already stored in hashmap and list.
+						//If stored already then get value of character in hash map and increment by 1 and then store it
+						// If not stored then add character to both list and hash map
 						char character = tempArray[i];
 						boolean isCharacterPresent = uniqueCharactersWithCount.containsKey(character);
 						if(isCharacterPresent) {
@@ -48,10 +65,14 @@ public class FibonacciSeries {
 					}
 				}
 				boolean isDynamic = true;
+				
+				// if input string length is less than three then print dynamic and set flag appropriately
 				if(tempArray.length < 3 && tempArray.length != 0) {
 					System.out.println("Dynamic");
 					isDynamic = false;
 				}else {
+					
+					// for all list of unique characters check whether fibonacci law is satisfied. If not then set flag variable 
 					for(int i=listOfUniqueCharacters.size()-1; i>=2; i--) {
 						char currentCharacter = listOfUniqueCharacters.get(i);
 						char lastButOneCharacter = listOfUniqueCharacters.get(i-1);
@@ -61,6 +82,8 @@ public class FibonacciSeries {
 						}
 					}
 				}
+				
+				// print message according to the flag variable.
 				if(isDynamic && tempArray.length != 0) {
 					System.out.println("Dynamic");
 				}else if(tempArray.length != 0 && !isDynamic) {
